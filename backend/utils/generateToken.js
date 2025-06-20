@@ -9,7 +9,7 @@ const generateTokenAndSetCookie = (userId, res) => {
   res.cookie("jwt", token, {
     maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days in milliseconds
     httpOnly: true, //prevents client-side JavaScript from accessing the cookie
-    sameSite:"strict" // CSRF attacks cross-site request forgery attacks
+    sameSite:"strict",// CSRF attacks cross-site request forgery attacks
   });
 }
 export default generateTokenAndSetCookie;
